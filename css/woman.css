@@ -338,3 +338,14 @@ h2 {
     float:left;
     padding-left:10px;
 }
+
+.footer .wrapper .snswrap ul li {
+    float:left;
+    padding-left:10px;
+    opacity: 0.5;
+}
+.footer .wrapper .snswrap ul li:hover {
+    float:left;
+    padding-left:10px;
+    opacity: 1;
+}
