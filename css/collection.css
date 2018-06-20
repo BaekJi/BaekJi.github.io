@@ -1,0 +1,172 @@
+
+
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Anton', sans-serif;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.navigation {
+    margin:0 auto;
+    width:1000px;
+    font-family: 'Roboto', sans-serif;
+}
+.navigation h1 {float:left; margin-top:5px;}
+.navigation ul {float:right;}
+.navigation ul li {float:left;}
+.navigation ul li a {
+    font-size:12px;
+    color:#afafaf;
+    text-decoration:none;
+    padding:0 15px;
+    display:block;
+    height:30px;
+    line-height:50px;
+}
+.navigation ul li a:hover {
+    color:#00aeff;
+}
+
+hr {clear:both;margin:0;border:0;}
+
+.subtit {background-color: #bccfd9;}
+.subtit div {
+    margin:0 auto;
+    width:1000px;
+    height:70px;
+}
+.subtit div h2 {
+    float:left;
+    font-size:48px;
+    color:#626262;
+    line-height:70px;
+}
+.subtit div ul {
+    float:left;
+    padding-left:320px;
+}
+.subtit div ul li {float:left;}
+.subtit div ul li a {
+    font-size:15px;
+    line-height:70px;
+    color:#626262;
+    text-decoration:none;
+    padding:0 23px;
+}
+.subtit div ul li a:hover {
+    color: #000;
+}
+.tab-menu{width:1000px;margin:0 auto;margin-top:50px;font-family: 'Roboto', sans-serif;}
+ .tab-menu ul{display:flex}
+ .tab-menu li{flex:1;height:30px;}
+ .tab-menu li a{position:relative;display:block;width:100%;height:100%;background-color:#999;text-transform:uppercase;text-align:center;color:#fff;line-height:30px;border-radius: 10px 10px 0 0;text-decoration: none;}
+ .tab-menu li a.selected{background-color:#75b6d3;cursor:default}
+ .tab-container{width:1000px; height:520px; margin:0 auto;box-sizing:border-box; margin-bottom: 40px;}
+ .tab-container .tab-content{display:none;padding:12px;height:550px;box-sizing:border-box}
+ .tab-container .tab-content img { padding:5px}
+ .tab-container .tab-content ul li a {
+ color:#ccc;
+    font-size: 20px;
+    padding: 30px;
+    text-decoration: none;
+ } 
+ .tab-container .tab-content ul li a:hover {
+    font-size: 20px;
+    padding: 30px;
+    text-decoration: none;
+    color:#000
+ } 
+  .tab-container .tab-content.selected{display:block} 
+
+
+.TOP {
+    position:fixed; 
+    bottom:20px; 
+    right:20px;
+}
+
+.footer {
+    background-color:#31333e;
+}
+.footer .wrapper {
+    width:1000px;
+    margin:0 auto;
+    padding:40px 0 80px;
+}
+.footer .wrapper .copy {
+    float:left;color:#FFF;
+}
+.footer .wrapper .copy ul {
+    display:inline-block;padding-bottom:5px;
+}
+.footer .wrapper .copy ul li {
+    float:left;
+    border-left:1px solid #FFF;
+    margin-left:10px;
+    padding-left:10px;
+}
+.footer .wrapper .copy ul li:first-child {
+    border:0;
+    margin:0;
+    padding:0;
+}
+.footer .wrapper .copy ul li a {
+    color:#FFF;
+    text-decoration: none;
+}
+.footer .wrapper .copy p.stxt {
+    padding-top:20px;
+    font-size:12px;
+}
+.footer .wrapper .snswrap {
+    float:right;
+}
+.footer .wrapper .snswrap ul li {
+    float:left;
+    padding-left:10px;
+}

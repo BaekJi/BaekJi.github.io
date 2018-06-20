@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+
+    font-family: 'Anton', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.navigation {
+    margin:0 auto;
+    width:1000px;
+    font-family: 'Roboto', sans-serif;
+}
+.navigation h1 {float:left; margin-top:5px;}
+.navigation ul {float:right;}
+.navigation ul li {float:left;}
+.navigation ul li a {
+    font-size:12px;
+    color:#afafaf;
+    text-decoration:none;
+    padding:0 15px;
+    display:block;
+    height:30px;
+    line-height:50px;
+}
+.navigation ul li a:hover {
+    color:#00aeff;
+}
+
+
+hr {clear:both;margin:0;border:0;}
+
+.subtit {background-color:#bccfd9;}
+.subtit div {
+    margin:0 auto;
+    width:1000px;
+    height:70px;
+}
+.subtit div h2 {
+    float:left;
+    font-size:48px;
+    color:#626262;
+    line-height:70px;
+}
+.subtit div ul {
+    float:left;
+    padding-left:320px;
+}
+.subtit div ul li {float:left;}
+.subtit div ul li a {
+    font-size:15px;
+    line-height:70px;
+    color:#626262;
+    text-decoration:none;
+    padding:0 23px;
+}
+.subtit div ul li a:hover {
+    color: #000;
+}
+
+
+
+.accordion-menu{
+    width:900px;
+    height:450px;
+    margin: 90px auto;
+    margin: 40px 270px auto;
+    /*
+    margin-top:100px;
+    margin-right:auto;
+    margin-left:auto;
+    */
+    background-color:#ccc
+}
+.accordion-menu::after{
+    content:'';
+    display:block;
+    position:relative;
+    clear:both
+}
+.accordion-menu .menu-item{
+    position:relative;
+    float:left;
+    width:33.333%;
+    height:100%;
+    transition:width 300ms ease-in-out
+}
+/* .accordion-menu .menu-item:nth-of-type(1){
+    background-color:red
+}
+.accordion-menu .menu-item:nth-of-type(2){
+    background-color:blue
+}
+.accordion-menu .menu-item:nth-of-type(3){
+    background-color:purple
+}
+.accordion-menu .menu-item:nth-of-type(4){
+    background-color:gray
+} */
+
+h1 {
+    font-size:30px;
+    margin-top : 40px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+h2 {
+    font-size:20px;
+    margin-top : 70px;
+    font-family: 'Roboto', sans-serif;
+}
+.accordion-menu .menu-item figure{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+    
+}
+.accordion-menu .menu-item figure img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover
+}
+.accordion-menu .menu-item a{
+    display:block;
+    position:absolute;
+    z-index:100;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    color:#fff;
+    text-transform:uppercase;
+    text-align:center;
+    font-size:20px;
+    line-height:30px
+}
+.accordion-menu .menu-item a span{
+    display:inline-block;
+    position:absolute;
+    top:35%;
+    font-family: 'Roboto', sans-serif;
+   
+    
+    /* transform:translateX(-50%) translateY(-50%); */
+    transform:translateX(-50%);
+    vertical-align:top;
+    text-shadow:0 1px 1px rgba(0,0,0,0.15)
+}
+.accordion-menu .menu-item a span::before{
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    width:0;
+    height:0;
+    border-bottom:1px solid #fff;
+    transform:translateX(-50%);
+    transition:width 200ms ease-in-out
+}
+.accordion-menu .menu-item a:hover span::before{
+    width:100%
+}
+.accordion-menu .menu-item p{
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%
+}
+.accordion-menu .menu-item p span{
+    display:block;
+    position:absolute;
+    width:100%;
+    top:50%;
+    padding-right:30px;
+    padding-left:30px;
+    text-align:center;
+    word-break:break-all;
+    box-sizing:border-box;
+    opacity:0.95;
+    text-shadow:0 1px 1px rgba(0,0,0,0.15)
+}
+
+#contents {
+    margin: 0 120px;
+}
+
+
+
+#product_img img {
+-webkit-filter: drop-shadow(3px 3px 3px rgba(13, 0, 0, 0.1))
+}
+
+#product1 {
+    margin-top: 100px;
+    width: 260px;
+    height: 240px;
+    cursor: pointer;
+    margin-bottom: 100px;
+    
+}
+#product1:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+#product2 {
+    margin-top: 100px;
+    width: 250px;
+    height: 240px;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+ #product2:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+#product3 {
+    margin-top: 100px;
+    width: 250px;
+    height: 240px;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+ #product3:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+#product4 {
+    margin-top: 100px;
+    width: 250px;
+    height: 240px;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+ #product4:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+.TOP {
+    position:fixed; 
+    bottom:20px; 
+    right:20px;
+}
+
+.footer {
+    background-color:#31333e;
+}
+.footer .wrapper {
+    width:1000px;
+    margin:0 auto;
+    padding:40px 0 80px;
+}
+.footer .wrapper .copy {
+    float:left;color:#FFF;
+}
+.footer .wrapper .copy ul {
+    display:inline-block;padding-bottom:5px;
+}
+.footer .wrapper .copy ul li {
+    float:left;
+    border-left:1px solid #FFF;
+    margin-left:10px;
+    padding-left:10px;
+}
+.footer .wrapper .copy ul li:first-child {
+    border:0;
+    margin:0;
+    padding:0;
+}
+.footer .wrapper .copy ul li a {
+    color:#FFF;
+    text-decoration: none;
+}
+.footer .wrapper .copy p.stxt {
+    padding-top:20px;
+    font-size:12px;
+}
+.footer .wrapper .snswrap {
+    float:right;
+}
+.footer .wrapper .snswrap ul li {
+    float:left;
+    padding-left:10px;
+}

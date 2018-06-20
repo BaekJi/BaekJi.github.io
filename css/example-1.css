@@ -1,0 +1,424 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+   
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Anton', sans-serif;
+    position:relative;
+    height:100vh;
+    
+}
+ol, ul, li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+.navigation {
+    margin:0 auto;
+    width:1000px;
+    font-family: 'Roboto', sans-serif;
+}
+.navigation h1 {float:left; margin-top:5px;}
+.navigation ul {float:right;}
+.navigation ul li {float:left;}
+.navigation ul li a {
+    font-size:12px;
+    color:#afafaf;
+    text-decoration:none;
+    padding:5px 15px;
+    display:block;
+    height:30px;
+    line-height:50px;
+}
+.navigation ul li a:hover {
+    color:#00aeff;
+}
+
+
+.btn-menu{
+    display:block; position:relative;
+    width:60px; height:60px;
+    padding:15px; cursor:pointer; box-sizing:border-box; transition:background-color 200ms ease-in-out;
+}
+
+.btn-menu:hover{background-color:#222}
+
+.btn-menu span{
+    display:block; position:absolute;
+    top:50%; width:calc(100% - 30px); height:0; border-bottom:2px solid #222;transform:translateY(-50%); transition:border-color 200ms ease-in-out
+}
+
+.btn-menu span::before,
+.btn-menu span::after{
+    content:''; display:block; position:absolute; top:0; right:0; left:0; width:100%;height:0; border-bottom:2px solid #222; transition:border-color 200ms ease-in-out
+}
+.btn-menu span::before{transform:translateY(-8px)}
+.btn-menu span::after{transform:translateY(8px)}
+
+.btn-menu:hover span,
+.btn-menu:hover span::before,
+.btn-menu:hover span::after{
+    border-color:#fff
+}
+ h1{
+    position: absolute;
+    left: 700px;
+    top: 7px;
+}
+
+form {
+text-align: center;
+  padding: 14px 900px 0 0;
+  display: block;
+  position: absolute;
+}
+ 
+#namanyay-search-box {
+background: #eee;
+padding:10px;
+ border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border:0 none;
+width:150px;
+ }
+ 
+.side-menu{
+    position:absolute;
+    z-index:1000;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    background-color:#fff;
+    box-shadow:1px 0 2px rgba(0,0,0,0.15);
+    transform:translateX(-100%);
+    transition:transform 400ms ease-in-out
+}
+.side-menu.open{
+    transform:translateX(0)
+}
+.side-menu ul{
+    margin-top:60px;
+    padding-left:40px;
+    
+}
+.side-menu li{}
+.side-menu li + li{padding-top:10px}
+.side-menu li a{
+    display:inline-block;
+    position:relative;
+    vertical-align:top;
+    color:#222;
+    font-size:20px;
+    font-weight:500;
+    line-height:30px;
+    opacity:0.0;
+    color:#f00;
+    text-decoration: none;
+}
+.side-menu li.ani a{
+    opacity:1.0;
+    color:#222;
+    animation:menu 250ms ease-in-out
+}
+@keyframes menu{
+    0%{
+        opacity:0.5;
+        color:#9d70e1;
+    }
+    80%{
+        color:#9d70e1;
+    }
+    100%{
+        opacity:1.0;
+        color:#222
+    }
+}
+
+.side-menu li a::before{
+    content:'';
+    display:block;
+    position:absolute;
+    bottom:-2px;
+    left:0;
+    width:0;
+    height:0;
+    border-bottom:2px solid #222;
+    transition:width 200ms ease-in-out 
+    /* transition:all 200ms ease-in-out */
+    /* transition:width 200ms ease-in-out, border-color 300ms ease-in; */
+}
+.side-menu li a:hover::before{
+    width:100%;
+    /* border-color:#f00 */
+    /* border-bottom-width:10px */
+}
+
+.btn-close{
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    width:60px;
+    height:60px;
+    padding:15px;
+    cursor:pointer;
+    box-sizing:border-box;
+    transition:background-color 200ms ease-in-out
+}
+.btn-close:hover{
+    background-color:#222
+}
+.btn-close span{
+    overflow:hidden;
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+    transform:rotate(45deg);
+    transition:transform 200ms 380ms ease-in-out
+    /*
+    축약형
+    2개 축약. transition:속성(all, 스타일 속성) 속도(ms, s) : - 가속도 linear
+    3개 축약. transition:속성 속도(ms, s) 가속도 : - 딜레이 0
+    4개 축약. transition:속성 속도(ms, s) 딜레이(ms, s) 가속도
+
+    multiple.(2개 이상의 속성을 넣을 때)
+    transition:속성 속도(ms, s) 딜레이(ms, s) 가속도, 속성 속도(ms, s) 딜레이(ms, s) 가속도, 속성 속도(ms, s) 딜레이(ms, s) 가속도, 속성 속도(ms, s) 딜레이(ms, s) 가속도
+    */
+}
+.side-menu.open .btn-close span{
+    transform:rotate(0deg);
+    transition:transform 200ms 180ms ease-in-out
+}
+.btn-close span::before,.btn-close span::after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:200%;
+    height:1px;
+    background-color:#222;
+    transition:background-color 200ms ease-in-out
+}
+.btn-close:hover span::before,
+.btn-close:hover span::after{
+    background-color:#fff
+}
+
+
+.btn-close span::before{
+    transform:translateX(-50%) translateY(-50%) rotate(45deg)
+}
+.btn-close span::after{
+    transform:translateX(-50%) translateY(-50%) rotate(135deg)
+}
+
+hr {clear:both;margin:0;border:0;}
+
+.subtit {background-color: #a586e2;}
+.subtit div {
+    margin:0 auto;
+    width:1000px;
+    height:70px;
+}
+.subtit div h2 {
+    float:left;
+    font-size:48px;
+    color:#626262;
+    line-height:70px;
+}
+.subtit div ul {
+    float:left;
+    padding-left:320px;
+}
+.subtit div ul li {float:left;}
+.subtit div ul li a {
+    font-size:16px;
+    line-height:70px;
+    color:#626262;
+    text-decoration:none;
+    padding:0 18px;
+}
+.subtit div ul li a:hover {
+    color: #fff;
+}
+
+
+
+
+.content-1 {background-color: black;}
+.content-2 {}
+.content-3 {background-color:#bccfd9;}
+.content-4 {background-color: #e0bfb5;}
+
+.content {
+    
+}
+.content-1 iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+}
+.content div {
+    width:1000px;
+    margin:0 auto;
+}
+.content div h3 {
+    color:#000;
+    font-size:35px;
+    padding:65px 45px;
+    text-align: center;
+}
+.content div ul {
+    display:inline-block;
+}
+.content div ul li {
+    float:left;
+    width:50%;
+}
+
+.content div ul li p {
+    padding-left:20px;
+}
+.content div ul li dl {
+    padding-left:20px;
+}
+.content div ul li:first-child p {
+    padding:0 20px 0 0;
+}
+.content div ul li:first-child dl {
+    padding:0 20px 0 0;
+}
+.content div ul li dl dt {
+    font-size:20px;
+    font-weight:bold;
+    padding:20px 0 15px;
+     font-family: 'Roboto', sans-serif;
+}
+.content div ul li dl dd {
+    font-size:15px;
+    line-height:20px;
+    padding:0 0 80px;
+    text-align:justify;
+     font-family: 'Roboto', sans-serif;
+}
+.TOP {
+    position:fixed; 
+    bottom:20px; 
+    right:20px;
+}
+
+
+.footer {
+    background-color:#31333e;
+}
+.footer .wrapper {
+    width:1000px;
+    margin:0 auto;
+    padding:40px 0 80px;
+}
+.footer .wrapper .copy {
+    float:left;color:#FFF;
+}
+.footer .wrapper .copy ul {
+    display:inline-block;padding-bottom:5px;
+}
+.footer .wrapper .copy ul li {
+    float:left;
+    border-left:1px solid #FFF;
+    margin-left:10px;
+    padding-left:10px;
+}
+.footer .wrapper .copy ul li:first-child {
+    border:0;
+    margin:0;
+    padding:0;
+}
+.footer .wrapper .copy ul li a {
+    color:#FFF;
+    text-decoration: none;
+}
+.footer .wrapper .copy p.stxt {
+    padding-top:20px;
+    font-size:12px;
+}
+.footer .wrapper .snswrap {
+    float:right;
+}
+.footer .wrapper .snswrap ul li {
+    float:left;
+    padding-left:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
